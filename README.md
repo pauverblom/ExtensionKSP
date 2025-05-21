@@ -4,7 +4,7 @@ Launch Kerbal Space Program directly from Visual Studio Code! This extension add
 
 ## Features
 
-*   **One-Click Launch:** A rocket icon (`$(rocket)`) appears in the editor title bar when a `.cfg` file is open. Clicking this button launches Kerbal Space Program.
+*   **One-Click Launch:** A rocket icon appears in the editor title bar when a `.cfg` file is open. Clicking this button launches Kerbal Space Program.
 *   **Flexible Launch Options:**
     *   **Steam Launch (Default):** Attempts to launch KSP via Steam using AppID `220200`.
     *   **Custom Executable Path:** You can specify the direct path to your KSP executable if it's not installed via Steam or if you prefer to use a specific installation.
@@ -14,8 +14,6 @@ Launch Kerbal Space Program directly from Visual Studio Code! This extension add
     *   `Kerbal Space Program Launcher: Run KSP`: Launches the game using your configured preference.
     *   `Kerbal Space Program Launcher: Set Kerbal Space Program Executable Path`: Opens a file dialog to easily select and save your KSP executable path.
 *   **Clear Feedback:** Provides informational and error messages to guide you (e.g., if launching fails or when the path is updated).
-
-*(A screenshot of the rocket icon in the VS Code editor title bar would be great here! You can add one after publishing.)*
 
 ## Requirements
 
@@ -27,7 +25,7 @@ Launch Kerbal Space Program directly from Visual Studio Code! This extension add
 
 1.  Install the "Kerbal Space Program Launcher" extension from the VS Code Marketplace.
 2.  Open any Kerbal Space Program configuration file (a file ending with `.cfg`).
-3.  Look for the rocket icon (`$(rocket)`) in the editor's title bar (usually at the top right).
+3.  Look for the rocket icon in the editor's title bar (usually at the top right).
 4.  Click the icon to launch Kerbal Space Program!
     *   If it's your first time and you haven't set a custom path, you'll be prompted to either set one or proceed with a Steam launch attempt.
 
@@ -59,7 +57,7 @@ The following commands are available from the Command Palette:
 
 *   **Steam Launch Failures:** If launching via Steam fails, ensure the Steam client is running, you are logged in, and KSP (AppID 220200) is correctly installed under your Steam account. The extension will provide an option to set a direct path if a Steam launch fails.
 *   **Custom Path Failures:** If a custom executable path is set but launching fails, verify the path is correct and the game files are intact.
-*   Please report any other issues on the [GitHub repository issues page](https://github.com/your-github-username/kerbal-space-program-launcher/issues) (replace with your actual link after creating the repo).
+*   Please report any other issues on the [GitHub repository issues page](https://github.com/pauverblom/ExtensionKSP/issues).
 
 ## Release Notes
 
