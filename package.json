@@ -3,6 +3,8 @@
   "displayName": "Kerbal Space Program Launcher",
   "description": "Adds a run button to .cfg files to launch Kerbal Space Program",
   "version": "0.0.1",
+  "publisher": "Pauver",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/pauverblom/ExtensionKSP"
