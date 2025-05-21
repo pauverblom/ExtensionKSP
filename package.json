@@ -1,0 +1,72 @@
+{
+  "name": "kerbal-space-program-launcher",
+  "displayName": "Kerbal Space Program Launcher",
+  "description": "Adds a run button to .cfg files to launch Kerbal Space Program",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "kerbal-space-program-launcher.runKSP",
+        "title": "Run Kerbal Space Program",
+        "icon": "$(rocket)"
+      },
+      {
+        "command": "kerbal-space-program-launcher.setKSPPath",
+        "title": "Set Kerbal Space Program Executable Path"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "kerbal-space-program-launcher.runKSP",
+          "when": "resourceExtname == .cfg",
+          "group": "navigation",
+          "icon": "$(rocket)"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Kerbal Space Program Launcher",
+      "properties": {
+        "kerbalSpaceProgramLauncher.kspExecutablePath": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null,
+          "description": "Optional: The full path to the Kerbal Space Program executable. If not set, the extension will try to launch KSP via Steam."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.100.0",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "stable": "^0.1.8"
+  }
+}
